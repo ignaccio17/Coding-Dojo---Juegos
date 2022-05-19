@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+</head>
+
+<body>
+	<style type="text/css">
+		#ocean {
+			background-image: url("guerra-espacio.gif");
+			width: 900px;
+			height: 700px;
+			border: rgb(145, 3, 3) 15px groove;
+			filter: blur(0px);
+		}
+
+		.player {
+			background-image: url("rene-avion.png");
+			width: 75px;
+			height: 70px;
+		}
+
+		.enemy {
+			background-image: url("enemy.png");
+			width: 70px;
+			height: 75px;
+
+		}
+	</style>
+	<div id="ocean">
+		<div id="players">
+			<div class="player" ;style="left: 100px; top: 100px">
+			</div>
+		</div>
+
+		<div id="enemies">
+			<div class="enemy" style="left: 350px; top: 200px"></div>
+			<div class="enemy" style="left: 450px; top: 250px"></div>
+			<div class="enemy" style="left: 250px; top: 250px"></div>
+			<div class="enemy" style="left: 650px; top: 250px"></div>
+			<div class="enemy" style="left: 150px; top: 200px"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		var player = {
+			left: 450,
+			top: 620
+		}
+
+		var enemies = [
+			{ left: 350, top: 200 },
+			{ left: 450, top: 250 }
+		]
+		function drawPlayer() {
+			content = <div class='player' style='left:"+
+			    player.top`+"px; top: 100px'></div>;
+			document.getElementById("players").innerHTML =
+				content;
+		}
+		drawPlayer();
+
+
+
+
+
+	</script>
+</body>
+
+</html>
